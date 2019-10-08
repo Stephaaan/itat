@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+	<%- include('partial/head'); %>
+</head>
+
+<body>
+	<div>
+		<header class="main-wrapper">
+			<%- include('partial/header', { page, headerMenu, linkGenerator }); %>
+		</header>
+
+		<main>
+			<%- include('pages/' + page); %>
+		</main>
+
+		<aside id="sidebar">
+			<%- include('partial/aside', { page, asideMenu, linkGenerator }); %>
+		</aside>
+		<footer>
+			<%- include('partial/footer'); %>
+		</footer>
+	</div>
+</body>
+
+</html>

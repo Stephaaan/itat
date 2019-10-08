@@ -1,0 +1,246 @@
+body {
+  margin: auto;
+  padding: inherit;
+  background-color: rgb(146, 184, 90);
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5px;
+  margin-left: 21%;
+  margin-right: 21%;
+  margin-top: 5px;
+}
+header .site-banner {
+  padding-right: 3%;
+}
+header .header-foto {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(89, 134, 21);
+  margin-top: 0;
+  padding: 3px 0;
+}
+header nav ul li {
+  display: block;
+  padding: 5px 10px;
+  background-color: rgb(124, 161, 67);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  float: left;
+  background-color: white;
+  margin-left: 19.5%;
+  width: 43%;
+}
+
+main h1 {
+  text-align: center;
+}
+main a {
+  color: rgb(146, 184, 90);
+}
+main h3 {
+  color: rgb(146, 184, 90);
+}
+main p {
+  text-align: left;
+}
+main article {
+  padding: 1%;
+}
+main .lfloat {
+  float: left;
+}
+main .rfloat {
+  float: right;
+}
+main ul#workshops-panels {
+  display: flex;
+  flex-wrap: wrap;
+}
+main ul#workshops-panels li {
+  display: block;
+  flex-basis: 120px;
+  margin: 5px;
+  padding: 15px;
+  background-color: khaki;
+  min-height: 120px;
+  text-align: center;
+  position: relative;
+}
+main ul#workshops-panels li:hover {
+  background-color: rosybrown;
+}
+
+main ul#workshops-panels li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#previousYears > tbody > tr:nth-child(2n){
+  background-color: rgba(0,0,0,.6);
+}
+#searchform >fieldset{
+  width: fit-content;
+}
+aside#sidebar {
+  display: inline-block;
+  background-color: white;
+  width: 16.5%;
+  padding: 0.5%;
+}
+aside#sidebar h2 {
+  color: rgb(146, 184, 90);
+  text-align: center;
+  margin: 0;
+  padding-top: 5%;
+}
+aside#sidebar #searchform fieldset {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  text-align: center;
+}
+aside#sidebar nav {
+  color: rgb(146, 184, 90);
+}
+aside#sidebar nav > ul {
+  color: rgb(146, 184, 90);
+}
+aside#sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(89, 134, 21);
+  margin-top: 0;
+  padding: 3px 0;
+}
+aside#sidebar nav ul li {
+  display: block;
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  background-color: rgb(124, 161, 67);
+}
+
+aside#sidebar nav a {
+  color: white;
+  text-decoration: none;
+}
+
+aside#sidebar #sponsors {
+  position: fixed;
+  top: 40%;
+  right: 20px;
+  background-color: white;
+  border: 1px dashed black;
+  width: 150px;
+  padding: 2px;
+}
+
+aside#sidebar #sponsors h2 {
+  padding-bottom: 5%;
+}
+
+aside#sidebar #sponsors img {
+  transform: translateX(2px);
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 0.7%;
+  margin-top: 10px;
+}
+footer p {
+  padding-top: 0.5%;
+}
+footer p > a {
+  color: rgb(146, 184, 90);
+}
+.site-banner-text{
+  display: none;
+}
+.header,.main-wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media print {
+  header,
+  aside#sidebar,
+  footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px){
+  main{
+    float: none;
+    width: 60%;
+    margin: 0 auto;
+  }
+  aside#sidebar{
+    width: 60%;
+    margin: 0 19%;
+  }
+}
+@media screen and (max-width:850px){
+  .header-foto{
+    display: none;
+  }
+}
+@media screen and (max-width:650px){
+  .site-banner{
+    display: none;
+  }
+  .site-banner-text{
+    display: block;
+  }
+  main{
+    width: 90%;
+  }
+  aside#sidebar{
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+#previousYears>tbody>tr>td{
+  border: 1px solid black;
+}
+@media (max-width: 900px) {
+  aside#sidebar #sponsors {
+    position: static;
+    border: 0;
+    width: initial;
+    padding: 0;
+  }
+  #previousYears>tbody>tr>td:nth-child(1){
+    display:none;
+  }
+  #previousYears>tbody>tr>th:nth-child(1){
+    display:none;
+  }
+}
+
+@media (max-width: 550px) {
+  header nav ul {
+    flex-direction: column;
+  }
+}
