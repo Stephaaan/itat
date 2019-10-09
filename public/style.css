@@ -5,12 +5,11 @@ body {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
   top: 5px;
   margin-left: 21%;
   margin-right: 21%;
   margin-top: 5px;
+  position:relative;
 }
 header .site-banner {
   padding-right: 3%;
@@ -18,7 +17,7 @@ header .site-banner {
 header .header-foto {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0; 
 }
 header nav ul {
   display: flex;
@@ -37,12 +36,16 @@ header nav a {
   color: white;
   text-decoration: none;
 }
-
+.mainContent{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  display:flex;
+}
 main {
   float: left;
   background-color: white;
-  margin-left: 19.5%;
-  width: 43%;
+  width: 75%;
 }
 
 main h1 {
@@ -103,8 +106,7 @@ main ul#workshops-panels li a {
 aside#sidebar {
   display: inline-block;
   background-color: white;
-  width: 16.5%;
-  padding: 0.5%;
+  width:25%;
 }
 aside#sidebar h2 {
   color: rgb(146, 184, 90);
@@ -168,6 +170,9 @@ footer {
   background-color: white;
   padding-bottom: 0.7%;
   margin-top: 10px;
+  width: 100%;
+  margin: 10px auto;
+  max-width: 1000px;
 }
 footer p {
   padding-top: 0.5%;
@@ -183,6 +188,13 @@ footer p > a {
   width: 100%;
   margin: 0 auto;
 }
+#previousYears>tbody>tr>td{
+  border: 1px solid black;
+}
+.important-dates > tbody > tr:nth-child(2n){
+  background-color: rgba(0,0,0,.6);
+}
+
 @media print {
   header,
   aside#sidebar,
@@ -190,16 +202,33 @@ footer p > a {
     display: none;
   }
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 1350px){
+  aside#sidebar #sponsors {
+    position: static;
+    border: 0;
+    width: initial;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  aside#sidebar #sponsors a{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1000px){
+  .mainContent{
+    flex-direction: column;
+  }
   main{
-    float: none;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
   }
   aside#sidebar{
-    width: 60%;
-    margin: 0 19%;
+    margin-top:16px;
+    width: 100%;
   }
+  
 }
 @media screen and (max-width:850px){
   .header-foto{
@@ -221,16 +250,8 @@ footer p > a {
     margin: 0 2.5%;
   }
 }
-#previousYears>tbody>tr>td{
-  border: 1px solid black;
-}
+
 @media (max-width: 900px) {
-  aside#sidebar #sponsors {
-    position: static;
-    border: 0;
-    width: initial;
-    padding: 0;
-  }
   #previousYears>tbody>tr>td:nth-child(1){
     display:none;
   }

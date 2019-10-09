@@ -10,14 +10,15 @@
 		<header class="main-wrapper">
 			<%- include('partial/header', { page, headerMenu, linkGenerator }); %>
 		</header>
+		<div class="mainContent">
+			<main>
+				<%- include('pages/' + page); %>
+			</main>
 
-		<main>
-			<%- include('pages/' + page); %>
-		</main>
-
-		<aside id="sidebar">
-			<%- include('partial/aside', { page, asideMenu, linkGenerator }); %>
-		</aside>
+			<aside id="sidebar">
+				<%- include('partial/aside', { page, asideMenu, linkGenerator }); %>
+			</aside>
+		</div>
 		<footer>
 			<%- include('partial/footer'); %>
 		</footer>
